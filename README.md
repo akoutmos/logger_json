@@ -26,7 +26,17 @@ LoggerJSON provides two JSON formatters out of the box (see below for implementi
 The `LoggerJSON.Formatters.BasicLogger` formatter provides a generic JSON formatted message with no vendor specific entries in the payload. A sample log entry from `LoggerJSON.Formatters.BasicLogger` looks like the following:
 
 ```json
-
+{
+  "time":"2020-04-11T15:17:41.465Z",
+  "severity":"debug",
+  "message":"hello",
+  "metadata":{
+    "domain":["elixir"],
+    "dynamic_metadata":5,
+    "time":1586632661464854,
+    "user_id":11
+  }
+}
 ```
 
 The other formatter that comes with LoggerJSON is `LoggerJSON.Formatters.GoogleCloudLogger` and generates JSON that is compatible with the
